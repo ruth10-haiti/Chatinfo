@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialConnect - Fil d'actualité</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>🌐 SocialConnect</h2>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active"><i class="fas fa-home"></i> Accueil</a>
+                <a href="profile.html" id="profileLink"><i class="fas fa-user"></i> Profil</a>
+                <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="profile-card" id="sidebarProfile">
+                <!-- Profil utilisateur -->
+            </div>
+            <div class="stats-card">
+                <h3>📊 Statistiques</h3>
+                <div class="stat-item">
+                    <span>Posts</span>
+                    <span id="statPosts">0</span>
+                </div>
+                <div class="stat-item">
+                    <span>Abonnés</span>
+                    <span id="statFollowers">0</span>
+                </div>
+                <div class="stat-item">
+                    <span>Abonnements</span>
+                    <span id="statFollowing">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="feed">
+            <div class="create-post">
+                <h3>✍️ Créer un post</h3>
+                <form id="postForm">
+                    <textarea id="postContent" placeholder="Quoi de neuf ?" rows="3"></textarea>
+                    <div class="post-actions">
+                        <label for="postImage" class="image-label">
+                            <i class="fas fa-image"></i> Ajouter une image
+                        </label>
+                        <input type="file" id="postImage" accept="image/*" style="display: none">
+                        <button type="submit">Publier</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div id="postsList" class="posts-list">
+                <div class="loading">Chargement des posts...</div>
+            </div>
+        </div>
+        
+        <div class="trending">
+            <div class="trending-card">
+                <h3>🔥 Tendances</h3>
+                <div class="trending-item">
+                    <span>#SocialConnect</span>
+                    <span>📈 1.2k posts</span>
+                </div>
+                <div class="trending-item">
+                    <span>#DevLife</span>
+                    <span>📈 845 posts</span>
+                </div>
+                <div class="trending-item">
+                    <span>#JavaScript</span>
+                    <span>📈 632 posts</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
